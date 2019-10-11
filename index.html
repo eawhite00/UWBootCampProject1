@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,70 +8,231 @@
     <title>Document</title>
 
     <style>
-    
         /* Setting the map container as the whole  ackground of the page */
         #map {
-          height: 100%; 
-          width: 100%; 
-          position:absolute; 
-          top: 0; 
-          left: 0; 
-          z-index: 0; /* setting the z-index to zero makes sure it's behind other elements */
-         }
-  
-         /* This pushes the jumbotron in front of the map by setting its z-index to 1 */
-         .jumbotron {
-             z-index: 1;
-             position: relative;
-         }
-      </style>
-  
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            height: 2rem;
+            width: 100%;
+            position: relative;
+            /* top: 0; */
+            /* left: 0; */
+            /* z-index: 0; */
+            /* setting the z-index to zero makes sure it's behind other elements */
+        }
+
+        /* This pushes the jumbotron in front of the map by setting its z-index to 1 */
+        /* .jumbotron {
+            z-index: 1;
+            position: relative;
+        } */
+
+
+        .map-container-7 {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container-7 iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
-    
-    <!-- Here's the map -->
-    <div id="map"></div>
 
-    <div class ="container">
+<body>
+
+    <!-- Here's the map -->
+    <!-- <div id="map"></div> -->
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">uTrippin'</span>
+        </nav>
+        <!-- End Navbar -->
+        <br>
+
+
         <div class="row">
-            <div class="column">
-                <div class="jumbotron">
-                    <h1 class="display-4">Hello, world!</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                </div>
+            <div class="col">
+                <!--Section: Contact v.2-->
+                <section class="section">
+
+                    <!--Section heading-->
+                    <h2 class="section-heading h1 pt-4 mb-5">Contact us</h2>
+
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <!--Google map-->
+                            <div id="map-container-google-12" class="z-depth-1-half map-container-7"
+                                style="height: 200px">
+                                <iframe src="https://maps.google.com/maps?q=Miami&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-4">
+                                    <form>
+
+                                        <div class="md-form">
+                                            <input type="text" id="contact-name" class="form-control">
+                                            <label for="contact-name" class="">Your name</label>
+                                        </div>
+
+                                        <div class="md-form">
+                                            <input type="text" id="contact-email" class="form-control">
+                                            <label for="contact-email" class="">Your email</label>
+                                        </div>
+
+                                        <div class="md-form">
+                                            <input type="text" id="contact-Subject" class="form-control">
+                                            <label for="contact-Subject" class="">Subject</label>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-4">
+                                    <div class="md-form primary-textarea">
+                                        <textarea id="contact-message" class="md-textarea form-control mb-0" rows="5"
+                                            style="padding-bottom: 1.2rem;"></textarea>
+                                        <label for="contact-message">Your message</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <a class="btn btn-mdb-color btn-block">Send Message</a>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <!--Section: Contact v.2-->
+
 
             </div>
+
         </div>
+
+
+        <div class="row">
+            <div class="col">
+                <!-- Form and Map Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <!-- End Form -->
+                        <!-- Map -->
+                        <div id="map">
+                        </div>
+                        <!-- End Map -->
+
+                    </div>
+                </div>
+                <!-- End of Form and Map Card -->
+            </div>
+
+
+            <!-- Results Display -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+
+        <!-- Table Card -->
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
     <script>
-    // Initialize and add the map
-    function initMap() {
-        // This sets the starting location at uluru, which is what the do in the example map so I kept it.
-        var uluru = {lat: -25.344, lng: 131.036};
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 4, center: uluru});
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
-    }
+        // Initialize and add the map
+        function initMap() {
+            // This sets the starting location at uluru, which is what the do in the example map so I kept it.
+            var uluru = { lat: -25.344, lng: 131.036 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 4, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
+        }
     </script>
 
 
     <!-- this is the include for google maps + bootstraps -->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWSB7DGeycNrp-k771O8-LyyM6LScilko&callback=initMap">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWSB7DGeycNrp-k771O8-LyyM6LScilko&callback=initMap">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>
