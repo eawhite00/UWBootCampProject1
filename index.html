@@ -12,7 +12,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="Assets/css/style.css">
-
+    <script src="./Assets/javascript/table-events.js"></script>
 </head>
 
 <body>
@@ -45,42 +45,40 @@
                                     frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
 
+                            <!-- Break beneath the map -->
+                            <br>
+
                             <div class="row">
                                 <!--Grid column-->
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-12 mb-4">
                                     <form>
                                         <div class="md-form">
-                                            <input type="text" id="destination-name" class="form-control">
                                             <label for="destination-name" class="">Destination City</label>
+                                            <input type="text" id="destination-name" class="form-control">
+
                                         </div>
 
                                         <div class="md-form">
-                                            <input type="text" id="destination-state" class="form-control">
                                             <label for="destination-state" class="">State (Abbreviation)</label>
+                                            <input type="text" id="destination-state" class="form-control">
+
                                         </div>
 
                                         <div class="md-form">
-                                            <input type="text" id="duration-value" class="form-control">
                                             <label for="duration-value" class="">Duration (Number of Days)</label>
+                                            <input type="text" id="duration-value" class="form-control">
+
                                         </div>
                                     </form>
                                 </div>
                                 <!--Grid column-->
 
                                 <!--Grid column-->
-                                <div class="col-md-6 mb-4">
-                                    <div class="md-form primary-textarea">
-                                        <textarea id="contact-message" class="md-textarea form-control mb-0" rows="5"
-                                            style="padding-bottom: 1.2rem;"></textarea>
-                                        <label for="contact-message">Your message</label>
-                                    </div>
-                                </div>
-                                <!--Grid column-->
-
-                                <!--Grid column-->
                                 <div class="col-md-12">
                                     <div class="text-center">
-                                        <button type="button" class="btn btn-secondary" type="submit" value="Submit">Submit</button>
+                                        <button type="button" 
+                                        id="map-submit-button" class="btn btn-secondary btn-lg btn-block" type="submit"
+                                            value="Submit">Submit</button>
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -191,7 +189,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        
+
 
 
     <!-- Map (to be used later - stashing here for now) -->
