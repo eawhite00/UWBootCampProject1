@@ -35,9 +35,6 @@
 
                 <!--Section: Contact v.2-->
                 <section class="section">
-
-                    <!--Section heading-->
-                    <h2 class="section-heading h1 pt-4 mb-5">Contact us</h2>
                     <div class="card">
                         <div class="card-body">
 
@@ -53,18 +50,18 @@
                                 <div class="col-md-6 mb-4">
                                     <form>
                                         <div class="md-form">
-                                            <input type="text" id="contact-name" class="form-control">
-                                            <label for="contact-name" class="">Your name</label>
+                                            <input type="text" id="destination-name" class="form-control">
+                                            <label for="destination-name" class="">Destination City</label>
                                         </div>
 
                                         <div class="md-form">
-                                            <input type="text" id="contact-email" class="form-control">
-                                            <label for="contact-email" class="">Your email</label>
+                                            <input type="text" id="destination-state" class="form-control">
+                                            <label for="destination-state" class="">State (Abbreviation)</label>
                                         </div>
 
                                         <div class="md-form">
-                                            <input type="text" id="contact-Subject" class="form-control">
-                                            <label for="contact-Subject" class="">Subject</label>
+                                            <input type="text" id="duration-value" class="form-control">
+                                            <label for="duration-value" class="">Duration (Number of Days)</label>
                                         </div>
                                     </form>
                                 </div>
@@ -83,7 +80,7 @@
                                 <!--Grid column-->
                                 <div class="col-md-12">
                                     <div class="text-center">
-                                        <a class="btn btn-mdb-color btn-block">Send Message</a>
+                                        <button type="button" class="btn btn-secondary" type="submit" value="Submit">Submit</button>
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -92,7 +89,8 @@
                         </div>
                     </div>
                 </section>
-                <!--Section: Contact v.2-->
+                <!-- End Section: Contact v.2-->
+
             </div>
         </div>
         <!-- End of Google Map Section -->
@@ -126,7 +124,7 @@
                         Wikipedia Results Displayed Here! (For Now)
                     </div>
                     <div class="card-body" id="wikipedia-results-div">
-                        
+
                     </div>
                 </div>
             </div>
@@ -162,18 +160,10 @@
                                     <td>Seattle</td>
                                     <td>WA</td>
                                     <td>4 days</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Portland</td>
-                                    <td>OR</td>
-                                    <td>2 days</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>San Franciso</td>
-                                    <td>California</td>
-                                    <td>5 days</td>
+                                    <td><button type="button" class="btn btn-info">Get Info!</button>
+                                    </td>
+                                    <td><button type="button" class="btn btn-danger">Remove</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -200,6 +190,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+        
 
 
     <!-- Map (to be used later - stashing here for now) -->
