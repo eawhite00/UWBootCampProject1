@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+<<<<<<< Updated upstream
     <style>
     
         /* Setting the map container as the whole  ackground of the page */
@@ -26,11 +27,19 @@
       </style>
   
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+=======
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+>>>>>>> Stashed changes
+
+    <link rel="stylesheet" href="Assets/css/style.css">
 
 </head>
 <body>
     
     <!-- Here's the map -->
+<<<<<<< Updated upstream
     <div id="map"></div>
 
     <div class ="container">
@@ -42,6 +51,128 @@
                     <hr class="my-4">
                     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+=======
+    <!-- <div id="map"></div> -->
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">uTrippin'</span>
+        </nav>
+        <!-- End Navbar -->
+        <br>
+
+        <div class="row">
+            <div class="col">
+                <!--Section: Contact v.2-->
+                <section class="section">
+
+                    <!--Section heading-->
+
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <!--Google map-->
+                            <div class="map-container"
+                                style="height: 200px">
+                                <div id="map">
+                            </div>
+                            <br>
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-4">
+                                    <form>
+                                        <div class="md-form">
+                                            <input type="text" id="contact-name" class="form-control">
+                                            <label for="contact-name" class="">Your name</label>
+                                        </div>
+
+                                        <div class="md-form">
+                                            <input type="text" id="contact-email" class="form-control">
+                                            <label for="contact-email" class="">Your email</label>
+                                        </div>
+
+                                        <div class="md-form">
+                                            <input type="text" id="contact-Subject" class="form-control">
+                                            <label for="contact-Subject" class="">Subject</label>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-4">
+                                    <div class="md-form primary-textarea">
+                                        <textarea id="contact-message" class="md-textarea form-control mb-0" rows="5"
+                                            style="padding-bottom: 1.2rem;"></textarea>
+                                        <label for="contact-message">Your message</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <a class="btn btn-mdb-color btn-block">Send Message</a>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <!--Section: Contact v.2-->
+
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <!-- Form and Map Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <!-- End Form -->
+
+                    </div>
+                </div>
+                <!-- End of Form and Map Card -->
+            </div>
+
+
+            <!-- Results Display -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+>>>>>>> Stashed changes
                 </div>
 
             </div>
@@ -49,6 +180,7 @@
     </div>
 
 
+<<<<<<< Updated upstream
     <script>
     // Initialize and add the map
     function initMap() {
@@ -62,6 +194,9 @@
     }
     </script>
 
+=======
+    <script src="Assets/javascript/maps.js"></script>
+>>>>>>> Stashed changes
 
     <!-- this is the include for google maps + bootstraps -->
     <script async defer

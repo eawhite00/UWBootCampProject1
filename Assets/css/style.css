@@ -1,0 +1,25 @@
+        /* Setting the map container as the whole  ackground of the page */
+        #map {
+            position: relative;
+            left: 0;
+            top: 0;
+            height: 500px;
+            width: 100%;
+            /* top: 0; */
+            /* left: 0; */
+            /* z-index: 0; */
+            /* setting the z-index to zero makes sure it's behind other elements */
+        }
+
+        /* This pushes the jumbotron in front of the map by setting its z-index to 1 */
+        /* .jumbotron {
+            z-index: 1;
+            position: relative;
+        } */
+
+        .map-container{
+            overflow: hidden;
+            padding-bottom: 70%;
+            position: relative;
+            height: 0;
+        }
