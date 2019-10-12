@@ -17,9 +17,6 @@
 
 <body>
 
-    <!-- Here's the map -->
-    <!-- <div id="map"></div> -->
-
     <div class="container">
 
         <!-- Navbar -->
@@ -27,33 +24,34 @@
             <span class="navbar-brand mb-0 h1">uTrippin'</span>
         </nav>
         <!-- End Navbar -->
+
+        <!-- Break separating navbar from Google Map Card w/Form -->
         <br>
 
 
+        <!-- Card with Map and Form -->
         <div class="row">
             <div class="col">
+
                 <!--Section: Contact v.2-->
                 <section class="section">
 
                     <!--Section heading-->
                     <h2 class="section-heading h1 pt-4 mb-5">Contact us</h2>
-
                     <div class="card">
-
                         <div class="card-body">
 
                             <!--Google map-->
-                            <div class="map-container"
+                            <div id="map-container-google-12" class="z-depth-1-half map-container-7"
                                 style="height: 200px">
-                                <div id="map"></div>
+                                <iframe src="https://maps.google.com/maps?q=Miami&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
 
                             <div class="row">
-
                                 <!--Grid column-->
                                 <div class="col-md-6 mb-4">
                                     <form>
-
                                         <div class="md-form">
                                             <input type="text" id="contact-name" class="form-control">
                                             <label for="contact-name" class="">Your name</label>
@@ -68,7 +66,6 @@
                                             <input type="text" id="contact-Subject" class="form-control">
                                             <label for="contact-Subject" class="">Subject</label>
                                         </div>
-
                                     </form>
                                 </div>
                                 <!--Grid column-->
@@ -92,20 +89,18 @@
                                 <!--Grid column-->
 
                             </div>
-
                         </div>
-
                     </div>
-
                 </section>
                 <!--Section: Contact v.2-->
-
-
             </div>
-
         </div>
+        <!-- End of Google Map Section -->
 
+        <!-- Break between Google Map w/Form card section and rest of page -->
+        <br>
 
+        
         <div class="row">
             <div class="col">
                 <!-- Form and Map Card -->
@@ -124,8 +119,8 @@
                         </form>
                         <!-- End Form -->
                         <!-- Map -->
-                        <div id="map">
-                        </div>
+                        <!-- <div id="map">
+                        </div> -->
                         <!-- End Map -->
 
                     </div>

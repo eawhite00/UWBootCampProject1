@@ -1,18 +1,28 @@
-#map {
+/* .map-container-7 {
     position: relative;
     left: 0;
     top: 0;
     height: 500px;
     width: 100%;
-    /* top: 0; */
-    /* left: 0; */
-    /* zindex: 0; */
-    /* setting the zindex to zero makes sure it's behind other elements */
-}
+    top: 0; 
+    left: 0;
+    zindex: 0;
+    setting the zindex to zero makes sure it's behind other elements
+} */
 
-.mapcontainer{
-    overflow: hidden;
-    padding-bottom: 70%;
-    position: relative;
-    height: 0;
-}
+.map-container-7 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+/* Imported CSS from the bootstrap widget we found */
+.map-container-7{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+  
