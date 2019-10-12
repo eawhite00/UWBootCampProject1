@@ -7,43 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <style>
-        /* Setting the map container as the whole  ackground of the page */
-        #map {
-            height: 2rem;
-            width: 100%;
-            position: relative;
-            /* top: 0; */
-            /* left: 0; */
-            /* z-index: 0; */
-            /* setting the z-index to zero makes sure it's behind other elements */
-        }
-
-        /* This pushes the jumbotron in front of the map by setting its z-index to 1 */
-        /* .jumbotron {
-            z-index: 1;
-            position: relative;
-        } */
-
-
-        .map-container-7 {
-            overflow: hidden;
-            padding-bottom: 56.25%;
-            position: relative;
-            height: 0;
-        }
-
-        .map-container-7 iframe {
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-    </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Assets/css/style.css">
 
 </head>
 
@@ -75,10 +43,9 @@
                         <div class="card-body">
 
                             <!--Google map-->
-                            <div id="map-container-google-12" class="z-depth-1-half map-container-7"
+                            <div class="map-container"
                                 style="height: 200px">
-                                <iframe src="https://maps.google.com/maps?q=Miami&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <div id="map"></div>
                             </div>
 
                             <div class="row">
@@ -204,18 +171,7 @@
     </div>
 
 
-    <script>
-        // Initialize and add the map
-        function initMap() {
-            // This sets the starting location at uluru, which is what the do in the example map so I kept it.
-            var uluru = { lat: -25.344, lng: 131.036 };
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 4, center: uluru });
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({ position: uluru, map: map });
-        }
-    </script>
+    <script src="Assets/javascript/maps.js"></script>
 
 
     <!-- this is the include for google maps + bootstraps -->
