@@ -15,7 +15,7 @@ function handleSubmit(event) {
 
 //function that fetches the wikipedia result from the search query using wikipedia api call
   function fetchResults(searchQuery) {
-    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=10&srsearch=${searchQuery}`;
+    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=3&srsearch=${searchQuery}`;
     console.log(endpoint);
     fetch(endpoint)
     .then(response => response.json())
