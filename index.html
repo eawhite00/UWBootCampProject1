@@ -37,11 +37,11 @@
                         <div class="card-body">
 
                             <!--Google map-->
-                            <!-- <div id="map-container-google-12" class="z-depth-1-half map-container-7"
+                            <div id="map-container-google-12" class="z-depth-1-half map-container-7"
                                 style="height: 200px">
-                                <iframe src="https://maps.google.com/maps?q=Miami&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                    frameborder="0" style="border:0" allowfullscreen></iframe>
-                            </div> -->
+                                <div id="map">
+                                </div>
+                            </div>
 
                             <!-- Break beneath the map -->
                             <br>
@@ -198,9 +198,17 @@
     <!-- Table Event JavaScript file -->
     <script src="./Assets/javascript/table-events.js"></script>
 
+    <!-- Google Maps API JavaScript reference -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWSB7DGeycNrp-k771O8-LyyM6LScilko&callback=initMap">
+        </script>
+
+    <!-- Maps JavaScript -->
+    <script src="Assets/javascript/maps.js"></script>
+
+    
     <!-- Map (to be used later - stashing here for now) -->
-    <!-- <div id="map">
-        </div> -->
+  
     <!-- End Map -->
 
 
