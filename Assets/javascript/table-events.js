@@ -47,8 +47,13 @@ $(document).ready(function () {
 
         var searchQuery = destination;
 
+        // Wikipedia call here
         fetchResults(searchQuery);
-        
+
+        // Weather call here
+        weatherResults(destination);
+
+
     });
 
 
@@ -91,4 +96,49 @@ $(document).ready(function () {
     // $(".remove-button").live('click', function () {
     //     $(this).closest('tr').remove();
     // });
+    function weatherResults(destination) {
+        console.log("the ajax is working")
+
+        //var APIKey = "&appid=f6d21d14434f0b6e5decd7507719d5bff";
+        var APIKey = "&appid=6d21d14434f0b6e5decd7507719d5bff";
+        var endpoint = "/data/2.5/weather?q=";
+        // Here we are building the URL we need to query the database
+        var URL = "https://api.openweathermap.org";
+        var queryURL = URL + endpoint + destination + APIKey;
+        console.log(queryURL);
+        //  Ajax call for weather API
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            // console.log(queryURL);
+            console.log(response);
+            $(".destination").html("<h1>" + response.name + " Weather Details</h1>");
+            $(".wind").text("Wind Speed: " + response.wind.speed);
+            $(".humidity").text("Humidity: " + response.main.humidity);
+
+            var cTemp = fToCelsius(response.main.temp);
+            $(".temp").text("Temperature (C) " + cTemp);
+
+            console.log("Wind Speed: " + response.wind.speed);
+            console.log("Humidity: " + response.main.humidity);
+            console.log("Temperature (F): " + response.main.temp);
+        });
+    };
+
+    // We then created an AJAX call
+
+
+
+    // fToCelsius();
+
+    function fToCelsius(responseTemp) {
+        var K = responseTemp;
+        var c = K - 273.15;
+        c = Math.round(c);
+        return c;
+    }
+
+
 });
