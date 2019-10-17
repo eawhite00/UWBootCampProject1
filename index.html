@@ -11,21 +11,22 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="Assets/css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
-
+    <!-- Background Image -->
+    
     <div class="container">
 
         <!-- Navbar -->
-        <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">uTrippin'</span>
+        <nav class="container-fluid-nav text-center border-dark" style="background-color: cadetblue";>
+            <span class="navbar-brand mb-0 text-center"><h1>uTrippin'</h1></span>
         </nav>
         <!-- End Navbar -->
 
         <!-- Break separating navbar from Google Map Card w/Form -->
         <br>
-
 
         <!-- Card with Map and Form -->
         <div class="row">
@@ -33,7 +34,7 @@
 
                 <!--Section: Contact v.2-->
                 <section class="section">
-                    <div class="card">
+                    <div class="card border-dark" style="background-color: blanchedalmond;">
                         <div class="card-body">
 
                             <!--Google map-->
@@ -100,13 +101,13 @@
         <!-- Combined Results Cards for Wikipedia and Zomato Results -->
         <div class="row">
 
-            <!-- Zomato results Card -->
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        Weather Results
+            <!-- Weather results Card -->
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                <div class="card border-dark mb-3">
+                    <div class="card-header" style="background-color: cadetblue;">
+                        What's the Weather Like?
                     </div>
-                    <div class="card-body " id="weather-results-div">
+                    <div class="card-body text-dark card-image" id="weather-results-div" style=" background-color: blanchedalmond; background-size: cover; background-repeat: no-repeat;">
                         <div class="destination"></div>
                         <div class="wind"></div>
                         <div class="humidity"></div>
@@ -117,12 +118,12 @@
             </div>
 
             <!-- Wikipedia Results Card -->
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        Wikipedia Results
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+                <div class="card border-dark mb-3">
+                    <div class="card-header" style="background-color: cadetblue;">
+                        Things to Check Out!
                     </div>
-                    <div class="card-body searchResults" id="wikipedia-results-div">
+                    <div class="card-body text-dark searchResults" id="wikipedia-results-div" style=" background-color: blanchedalmond; background-size: cover; background-repeat: no-repeat;">
 
                     </div>
                 </div>
@@ -137,11 +138,11 @@
         <!-- Table Card -->
         <div class="row">
             <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        Roadtrip Destination Table Displayed Here!
+                <div class="card border-dark">
+                    <div class="card-header" style="background-color: cadetblue;">
+                        Destinations
                     </div>
-                    <div class="card-body destinations-div">
+                    <div class="card-body destinations-div" style="background-color: blanchedalmond;">
                         <table id="destinations-table" class="table table-dark">
                             <thead>
                                 <tr>
@@ -152,16 +153,6 @@
                                     <th scope="col">Remove</th>
                                 </tr>
                             </thead>
-                            <!-- <tbody>
-                                <tr>
-                                    <th scope="row">Seattle</th>
-                                    <td>WA</td>
-                                    <td>4 days</td>
-                                    <td><button type="button" class="btn btn-info">Get Info!</button></td>
-                                    <td><button type="button" class="btn btn-danger">Remove</button>
-                                    </td>
-                                </tr>
-                            </tbody> -->
                         </table>
                     </div>
                 </div>

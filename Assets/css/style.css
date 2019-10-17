@@ -29,3 +29,19 @@
     #map{
         height: 500px;
     }
+
+    /* Background Image */
+    body {
+        background-image: url("../images/RoadTrip-Background-Image.jpg");
+      }
+
+      /* .navbar-brand {
+        font-family: 'Liu Jian Mao Cao', cursive;
+        font-size: 20px;
+      } */
+
+      .container-fluid-nav
+      {
+          border:1px solid #000;
+          margin-top: 20px;
+      }
