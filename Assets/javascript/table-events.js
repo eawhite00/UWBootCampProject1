@@ -30,6 +30,7 @@ $(document).ready(function () {
         );
 
         $(".table").append(newTablerow);
+        $(newTablerow).attr("class", "col");
     });
 
     // Function that captures the inputs of the <tr> and stores them as variables
@@ -45,21 +46,26 @@ $(document).ready(function () {
         console.log("Table State: " + state);
         console.log("Table Duration: " + duration);
 
-        var searchQuery = destination;
+        var searchQuery = destination + state;
 
         // Wikipedia call here
         fetchResults(searchQuery);
 
         // Weather call here
         weatherResults(destination);
+    });
 
-
+    // Remove Button Click Handler Function
+    $(document).on("click", ".remove-button", function () {
+        event.preventDefault();
+        console.log("Remove button clicked!");
+        $(this).closest('tr').remove()
     });
 
 
     //function that fetches the wikipedia result from the search query using wikipedia api call
     function fetchResults(searchQuery) {
-        const queryUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=3&srsearch=${searchQuery}`;
+        const queryUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=1&srsearch=${searchQuery}`;
         console.log(queryUrl);
         fetch(queryUrl)
             .then(response => response.json())
@@ -85,12 +91,13 @@ $(document).ready(function () {
               <h3 class="resultItem-title">
                 <a href="${url}" target="_blank" rel="noopener">${result.title}</a>
               </h3>
-              <span class="resultItem-snippet">${result.snippet}</span><br>
               <a href="${url}" class="resultItem-link" target="_blank" rel="noopener">${url}</a>
             </div>`
             );
         });
     }
+    // Storing results span here for now
+    // <span class="resultItem-snippet">${result.snippet}</span>
 
     // Click funtion that removes a <tr>
     // $(".remove-button").live('click', function () {
