@@ -5,32 +5,40 @@ $(document).ready(function () {
     // Click function that creates a <tr>
     $("#map-submit-button").click(function (event) {
         event.preventDefault();
-        console.log("Submit button clicked!")
+        console.log("Submit button clicked!");
 
-        var destinationName = $("#destination-name").val().trim();
-        var destinationState = $("#destination-state").val().trim();
-        var durationStay = $("#duration-value").val().trim();
-        var getInfoButton = $('<button type="button" class="btn btn-info get-info-button">Get Info!</button>');
-        getInfoButton.attr("data-name", destinationName);
-        getInfoButton.attr("data-state", destinationState);
-        getInfoButton.attr("data-duration", durationStay);
-        var removeButton = ('<button type="button" class="btn btn-danger remove-button">Remove</button>');
+        // Parsley form validation check
+        var parsedForm =  $('#inputForm').parsley();
+        console.log(parsedForm.isValid());
 
-        console.log("Destination Name: " + destinationName);
-        console.log("Destination State: " + destinationState);
-        console.log("Duration of stay: " + durationStay + " days");
+        if (parsedForm.isValid()){
+
+            // Sets variables for inputs
+            var destinationName = $("#destination-name").val().trim();
+            var destinationState = $("#destination-state").val().trim();
+            var durationStay = $("#duration-value").val().trim();
+            var getInfoButton = $('<button type="button" class="btn btn-info get-info-button">Get Info!</button>');
+            getInfoButton.attr("data-name", destinationName);
+            getInfoButton.attr("data-state", destinationState);
+            getInfoButton.attr("data-duration", durationStay);
+            var removeButton = ('<button type="button" class="btn btn-danger remove-button">Remove</button>');
+
+            console.log("Destination Name: " + destinationName);
+            console.log("Destination State: " + destinationState);
+            console.log("Duration of stay: " + durationStay + " days");
 
 
-        var newTablerow = $("<tr>").append(
-            $("<td>").text(destinationName),
-            $("<td>").text(destinationState),
-            $("<td>").text(durationStay + " days"),
-            $("<td>").html(getInfoButton),
-            $("<td>").html(removeButton),
-        );
+            var newTablerow = $("<tr>").append(
+                $("<td>").text(destinationName),
+                $("<td>").text(destinationState),
+                $("<td>").text(durationStay + " days"),
+                $("<td>").html(getInfoButton),
+                $("<td>").html(removeButton),
+            );
 
-        $(".table").append(newTablerow);
-        $(newTablerow).attr("class", "col");
+            $(".table").append(newTablerow);
+            $(newTablerow).attr("class", "col");
+        }
     });
 
     // Function that captures the inputs of the <tr> and stores them as variables
@@ -120,13 +128,13 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             // console.log(queryURL);
-            console.log(response);
-            $(".destination").html("<h1>" + response.name + " Weather Details</h1>");
-            $(".wind").text("Wind Speed: " + response.wind.speed);
-            $(".humidity").text("Humidity: " + response.main.humidity);
+           console.log(response);
+           $(".destination").html("<h1>" + response.name + " Weather Details</h1>");
+           $(".wind").html("<h6>Wind Speed: " + response.wind.speed + "</h6>");
+           $(".humidity").html("<h6>Humidity: " + response.main.humidity + "</h6>");
 
-            var cTemp = fToCelsius(response.main.temp);
-            $(".temp").text("Temperature (C) " + cTemp);
+           var cTemp = fToCelsius(response.main.temp);
+           $(".temp").html("<h6>Temperature (C) " + cTemp + "</h6>");
 
             console.log("Wind Speed: " + response.wind.speed);
             console.log("Humidity: " + response.main.humidity);
