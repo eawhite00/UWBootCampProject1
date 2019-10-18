@@ -16,12 +16,14 @@
 
 <body>
     <!-- Background Image -->
-    
+
     <div class="container">
 
         <!-- Navbar -->
-        <nav class="container-fluid-nav text-center border-dark" style="background-color: cadetblue";>
-            <span class="navbar-brand mb-0 text-center"><h1>uTrippin'</h1></span>
+        <nav class="container-fluid-nav text-center border-dark" style="background-color: cadetblue" ;>
+            <span class="navbar-brand mb-0 text-center">
+                <h1>uTrippin'</h1>
+            </span>
         </nav>
         <!-- End Navbar -->
 
@@ -50,22 +52,26 @@
                             <div class="row">
                                 <!--Grid column-->
                                 <div class="col-md-12 mb-4">
-                                    <form>
+                                    <form id="inputForm">
+                                        <!-- City Input -->
                                         <div class="md-form">
                                             <label for="destination-name" class="">Destination City</label>
-                                            <input type="text" id="destination-name" class="form-control">
+                                            <input type="text" id="destination-name" class="form-control" required="">
 
                                         </div>
 
+                                        <!-- State input (validates input for a 2-letter abbreviation) -->
                                         <div class="md-form">
                                             <label for="destination-state" class="">State (Abbreviation)</label>
-                                            <input type="text" id="destination-state" class="form-control">
+                                            <input type="text" id="destination-state" class="form-control" required=""
+                                                data-parsley-minlength="2" data-parsley-maxlength="2">
 
                                         </div>
 
+                                        <!-- Days input (validates input for a number) -->
                                         <div class="md-form">
                                             <label for="duration-value" class="">Duration (Number of Days)</label>
-                                            <input type="text" id="duration-value" class="form-control">
+                                            <input type="number" id="duration-value" class="form-control" required="">
 
                                         </div>
                                     </form>
@@ -107,7 +113,8 @@
                     <div class="card-header" style="background-color: cadetblue;">
                         What's the Weather Like?
                     </div>
-                    <div class="card-body text-dark card-image" id="weather-results-div" style=" background-color: blanchedalmond; background-size: cover; background-repeat: no-repeat;">
+                    <div class="card-body text-dark card-image" id="weather-results-div"
+                        style=" background-color: blanchedalmond; background-size: cover; background-repeat: no-repeat;">
                         <div class="destination"></div>
                         <div class="wind"></div>
                         <div class="humidity"></div>
@@ -123,7 +130,8 @@
                     <div class="card-header" style="background-color: cadetblue;">
                         Things to Check Out!
                     </div>
-                    <div class="card-body text-dark searchResults" id="wikipedia-results-div" style=" background-color: blanchedalmond; background-size: cover; background-repeat: no-repeat;">
+                    <div class="card-body text-dark searchResults" id="wikipedia-results-div"
+                        style=" background-color: blanchedalmond; background-size: cover; background-repeat: no-repeat;">
 
                     </div>
                 </div>
@@ -194,12 +202,15 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWSB7DGeycNrp-k771O8-LyyM6LScilko&callback=initMap">
         </script>
 
+    <script src="Assets/javascript/parsley.js"></script>
+
+
     <!-- Maps JavaScript -->
     <script src="Assets/javascript/maps.js"></script>
 
-    
+
     <!-- Map (to be used later - stashing here for now) -->
-  
+
     <!-- End Map -->
 
 
